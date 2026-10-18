@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Amy Nance, MA, LMHC</title>
+  <meta name="description" content="Contact Amy Nance, MA, LMHC by phone, email or message about therapy for yourself or your teen in Kirkland, WA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Amy Nance, MA, LMHC" width="900" height="259"></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services-fees.html">Services &amp; Fees</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="crisis-resources.html">Crisis Resources</a>
+        <a href="https://amy-nance.clientsecure.me" class="btn nav-cta-mobile">Request Appointment</a>
+      </nav>
+      <a href="https://amy-nance.clientsecure.me" class="btn btn-header">Request Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h1>Contact Me</h1>
+          <p>If you have questions about therapy for yourself or your teen, call, email or message me. Please include your name, the name and age of the person seeking services, a brief description of why you are seeking services and the best way to contact you.</p>
+          <ul class="contact-details">
+            <li><a href="mailto:therapist@amynance.com">therapist@amynance.com</a></li>
+            <li><a href="tel:+14253121233">(425) 312-1233</a></li>
+            <li>10415 NE 37th Circle<br>Kirkland, WA 98033</li>
+          </ul>
+        </div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <label>First name<input type="text" name="first-name" autocomplete="given-name" required></label>
+            <label>Last name<input type="text" name="last-name" autocomplete="family-name" required></label>
+          </div>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Phone <span class="optional">(optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Message<textarea name="message" rows="6" required></textarea></label>
+          <button type="submit" class="btn">Send</button>
+          <p class="form-note">Please don’t use this form for emergencies. If you are in crisis, call or text <a href="tel:988">988</a> or call 911.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Location</h4>
+          <p>10415 NE 37th Circle<br>Kirkland, WA 98033</p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>Monday — Friday<br>1:00 pm — 7:00 pm</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:therapist@amynance.com">therapist@amynance.com</a><br><a href="tel:+14253121233">(425) 312-1233</a></p>
+        </div>
+      </div>
+      <p class="footer-crisis">In crisis? Call or text <a href="tel:988">988</a>, or call 911. <a href="crisis-resources.html">More crisis resources</a></p>
+      <p class="copyright">&copy; <span id="year"></span> Amy Nance, MA, LMHC</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
