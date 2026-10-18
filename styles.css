@@ -7,7 +7,7 @@
   --color-bg: #fff;
   --font-heading: "Libre Baskerville", Georgia, serif;
   --font-body: "Almarai", system-ui, -apple-system, sans-serif;
-  --header-height: 96px;
+  --header-height: 116px;
 }
 
 *,
@@ -129,7 +129,7 @@ a { color: var(--color-accent); }
 }
 
 .logo img {
-  width: 260px;
+  width: 340px;
   height: auto;
 }
 
@@ -451,7 +451,7 @@ a { color: var(--color-accent); }
 }
 
 /* Responsive */
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   .nav-toggle { display: flex; }
   .btn-header { display: none; }
 
@@ -474,9 +474,9 @@ a { color: var(--color-accent); }
 }
 
 @media (max-width: 860px) {
-  :root { --header-height: 80px; }
+  :root { --header-height: 90px; }
 
-  .logo img { width: 200px; }
+  .logo img { width: 250px; }
 
   .section { padding: 4rem 0; }
 
