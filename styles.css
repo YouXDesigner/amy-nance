@@ -162,18 +162,6 @@ a { color: var(--color-accent); }
   transition: background 0.3s, border-color 0.3s;
 }
 
-.site-header-overlay:not(.is-solid) .logo img {
-  filter: brightness(0) invert(1);
-}
-
-.site-header-overlay:not(.is-solid) .header-inner > .site-nav a:not(.btn) {
-  color: #fff;
-}
-
-.site-header-overlay:not(.is-solid) .nav-toggle span {
-  background: #fff;
-}
-
 .site-header-overlay.is-solid {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(6px);
@@ -233,6 +221,12 @@ a { color: var(--color-accent); }
   min-height: 100vh;
   padding-top: calc(var(--header-height) + 4rem);
   background-image: url("assets/home-hero.jpg");
+}
+
+.hero-home::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) calc(var(--header-height) + 80px)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
 }
 .hero-crisis { background-image: url("assets/crisis-hero.jpg"); }
 
