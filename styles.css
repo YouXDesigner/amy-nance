@@ -222,6 +222,8 @@ a { color: var(--color-accent); }
   padding-top: calc(var(--header-height) + 4rem);
   background-image: url("assets/home-hero.jpg");
 }
+
+.hero-home::before { display: none; }
 .hero-crisis { background-image: url("assets/crisis-hero.jpg"); }
 
 /* Sections */
