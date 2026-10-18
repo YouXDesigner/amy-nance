@@ -222,12 +222,6 @@ a { color: var(--color-accent); }
   padding-top: calc(var(--header-height) + 4rem);
   background-image: url("assets/home-hero.jpg");
 }
-
-.hero-home::before {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) calc(var(--header-height) + 80px)),
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
-}
 .hero-crisis { background-image: url("assets/crisis-hero.jpg"); }
 
 /* Sections */
