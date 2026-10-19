@@ -231,6 +231,12 @@ a { color: var(--color-accent); }
 .section-tight { padding: 4rem 0; }
 .section-panel { background: var(--color-panel); }
 
+.inset {
+  padding: 4.5rem clamp(1.5rem, 8vw, 8rem);
+  background: var(--color-panel);
+  border-radius: 12px;
+}
+
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
