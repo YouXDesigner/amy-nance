@@ -464,14 +464,14 @@ a { color: var(--color-accent); }
 }
 
 .contact-visual img {
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 140%;
   width: auto;
   max-width: none;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  /* Needle center is ~14% across the source image */
-  transform: translateX(-14%);
+  /* Anchor on Needle (~15% across source) at frame center */
+  transform: translate(-15%, -50%);
 }
 
 .contact-panel {
