@@ -445,31 +445,15 @@ a { color: var(--color-accent); }
 
 /* Contact */
 .contact-section {
-  position: relative;
-  padding: 5rem 0;
-  background: url("assets/contact.jpg") center 40% / cover no-repeat;
-}
-
-.contact-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.28);
-  pointer-events: none;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
 }
 
 .contact-layout {
-  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(2.5rem, 5vw, 4.5rem);
-  align-items: stretch;
-}
-
-.contact-intro {
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 10px;
+  align-items: start;
 }
 
 .contact-intro h1 {
@@ -519,7 +503,7 @@ a { color: var(--color-accent); }
   display: grid;
   gap: 1.1rem;
   padding: clamp(1.5rem, 3vw, 2.25rem);
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--color-panel);
   border-radius: 10px;
 }
 
@@ -545,9 +529,9 @@ a { color: var(--color-accent); }
 .contact-form textarea {
   font: inherit;
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.92);
+  background: #fff;
 }
 
 .contact-form input:focus,
