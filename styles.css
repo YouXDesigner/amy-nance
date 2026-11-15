@@ -324,8 +324,10 @@ a { color: var(--color-accent); }
   border-radius: 12px;
 }
 
-.about-photo {
-  filter: blur(18px);
+/* Same cover framing as Amy; source is padded so ears/paws stay in view */
+.split img.about-rocket {
+  object-fit: cover;
+  object-position: center center;
 }
 
 .split-reverse > :first-child { order: 2; }
