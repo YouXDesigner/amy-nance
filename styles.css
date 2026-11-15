@@ -266,6 +266,7 @@ a { color: var(--color-accent); }
 .section-tight > .inset h2,
 .section-panel > .center > h2 {
   font-size: clamp(2.25rem, 3vw, 2.4rem);
+  margin-top: -20px;
   margin-bottom: 0;
 }
 
