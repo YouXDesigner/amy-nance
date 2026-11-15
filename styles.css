@@ -311,7 +311,7 @@ a { color: var(--color-accent); }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0 2.5rem;
+  gap: 2.5rem 2.5rem;
   margin-top: 0;
   text-align: center;
 }
