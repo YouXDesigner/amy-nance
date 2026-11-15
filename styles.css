@@ -470,8 +470,8 @@ a { color: var(--color-accent); }
   height: 125%;
   width: auto;
   max-width: none;
-  /* Shift left so full Needle sits centered with even side space */
-  transform: translate(-32%, -50%);
+  /* Center Needle with even left/right space in the half-page crop */
+  transform: translate(-25%, -50%);
 }
 
 .contact-panel {
