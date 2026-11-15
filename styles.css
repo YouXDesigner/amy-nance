@@ -489,7 +489,7 @@ a { color: var(--color-accent); }
 .footer-grid p { margin: 0; }
 
 .footer-crisis {
-  margin: 3rem 0 0;
+  margin: 1.5rem 0 0;
   font-size: 0.9rem;
   color: var(--color-muted);
 }
