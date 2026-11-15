@@ -468,7 +468,7 @@ a { color: var(--color-accent); }
 
 /* Footer */
 .site-footer {
-  padding: 4.5rem 0 3rem;
+  padding: 2.5rem 0 3rem;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   text-align: center;
 }
