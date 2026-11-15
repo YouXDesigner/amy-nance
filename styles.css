@@ -522,7 +522,7 @@ a { color: var(--color-accent); }
 }
 
 .copyright {
-  margin: 0.75rem 0 0;
+  margin: 1.75rem 0 0;
   font-size: 0.85rem;
   color: var(--color-muted);
 }
