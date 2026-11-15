@@ -724,7 +724,20 @@ a { color: var(--color-accent); }
 }
 
 /* Compact nav: driven by JS when links would overlap the header CTA (and on small screens). */
-html.nav-compact .nav-toggle { display: flex; }
+html.nav-compact .header-inner {
+  justify-content: flex-start;
+  gap: 0;
+}
+
+html.nav-compact .nav-toggle {
+  display: flex;
+  margin-left: auto;
+  padding-inline: 0.25rem 0;
+}
+
+html.nav-compact .btn-header {
+  margin-left: 15px;
+}
 
 html.nav-compact .site-nav {
   display: none;
