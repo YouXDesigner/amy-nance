@@ -220,11 +220,11 @@ a { color: var(--color-accent); }
 .hero-home {
   min-height: 100vh;
   padding-top: calc(var(--header-height) + 4rem);
-  background-image: url("assets/home-hero.jpg");
+  background-image: url("assets/home-hero.jpg?v=2");
 }
 
 .hero-home::before { display: none; }
-.hero-crisis { background-image: url("assets/crisis-hero.jpg"); }
+.hero-crisis { background-image: url("assets/crisis-hero.jpg?v=2"); }
 
 /* Sections */
 .section { padding: 6rem 0; }
@@ -252,6 +252,12 @@ a { color: var(--color-accent); }
 }
 
 .split-reverse > :first-child { order: 2; }
+
+.photo-band img {
+  width: 100%;
+  height: clamp(280px, 45vw, 560px);
+  object-fit: cover;
+}
 
 .lead {
   font-size: 1.3rem;
@@ -286,7 +292,7 @@ a { color: var(--color-accent); }
 .fees {
   position: relative;
   padding: 7rem 0;
-  background: url("assets/fees.jpg") center / cover no-repeat;
+  background: url("assets/fees.jpg?v=2") center / cover no-repeat;
 }
 
 .fees-card {
