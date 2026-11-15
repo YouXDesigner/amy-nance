@@ -476,7 +476,10 @@ a { color: var(--color-accent); }
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+}
+
+.footer-grid > * + * {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .footer-grid h4 { margin-bottom: 0.6em; }
@@ -536,6 +539,8 @@ a { color: var(--color-accent); }
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
+  .footer-grid > * + * { border-left: 0; }
 
   .split-reverse > :first-child { order: 0; }
 
