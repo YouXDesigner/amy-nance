@@ -262,6 +262,10 @@ a { color: var(--color-accent); }
   max-width: 1080px;
   margin-inline: auto;
 }
+
+@media (max-width: 1199px) {
+  .wide-break { display: none; }
+}
 .section-panel { background: var(--color-panel); }
 
 .inset {
