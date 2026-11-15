@@ -359,10 +359,6 @@ a { color: var(--color-accent); }
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.fees-card > p:first-of-type {
-  padding-top: 1.75rem;
-}
-
 .fees-card > p:last-child {
   padding-bottom: 0;
 }
