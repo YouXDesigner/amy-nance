@@ -557,6 +557,7 @@ a { color: var(--color-accent); }
   .logo img { width: 250px; }
 
   .section { padding: 4rem 0; }
+  .section.section-panel { padding-top: 0; }
 
   .split,
   .services-grid,
