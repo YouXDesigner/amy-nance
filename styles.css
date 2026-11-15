@@ -471,7 +471,7 @@ a { color: var(--color-accent); }
   width: auto;
   max-width: none;
   /* Center Needle with even left/right space in the half-page crop */
-  transform: translate(-23%, -50%);
+  transform: translate(-20%, -50%);
 }
 
 .contact-panel {
