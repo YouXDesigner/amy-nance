@@ -293,12 +293,7 @@ a { color: var(--color-accent); }
 }
 
 .split:has(.contact-form) {
-  align-items: start;
-}
-
-.split:has(.contact-form) > div:first-child {
-  /* Match top of first gray inputs (below First name / Last name labels) */
-  margin-top: calc(0.95rem * 1.5 + 0.35rem);
+  align-items: center;
 }
 
 .split img {
