@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=68">
+  <link rel="stylesheet" href="styles.css?v=69">
 </head>
 <body>
   <header class="site-header">
@@ -31,15 +31,24 @@
   </header>
 
   <main>
-    <section class="section">
-      <div class="container split">
-        <div>
+    <section class="section contact-section">
+      <div class="container contact-layout">
+        <div class="contact-intro">
           <h1>Contact Me</h1>
-          <p>If you have questions about therapy for yourself or your teen, feel free to call, email or message me. Please include your name, the name and age of the prospective client, a brief description of why you are seeking services and the best way to contact you.</p>
+          <p>Questions about therapy for yourself or your teen? Call, email, or send a message. Include your name, the prospective client’s name and age, a brief note about what you’re looking for, and the best way to reach you.</p>
           <ul class="contact-details">
-            <li><a href="mailto:therapist@amynance.com">therapist@amynance.com</a></li>
-            <li><a href="tel:+14253121233">425-312-1233</a></li>
-            <li>10415 NE 37th Circle<br>Kirkland, WA 98033</li>
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:therapist@amynance.com">therapist@amynance.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+14253121233">425-312-1233</a>
+            </li>
+            <li>
+              <span class="contact-label">Office</span>
+              <span>10415 NE 37th Circle<br>Kirkland, WA 98033</span>
+            </li>
           </ul>
         </div>
         <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -51,7 +60,7 @@
           </div>
           <label>Email<input type="email" name="email" autocomplete="email" required></label>
           <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
-          <label>Message<textarea name="message" rows="6" required></textarea></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
           <button type="submit" class="btn">Send</button>
           <p class="form-note">Please don’t use this form for emergencies. If you are in crisis, call or text <a href="tel:988">988</a> or call 911.</p>
         </form>
