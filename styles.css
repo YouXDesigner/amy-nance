@@ -762,6 +762,8 @@ html.nav-compact.nav-compact-mobile .site-nav .nav-cta-mobile {
   :root { --header-height: 90px; }
   .logo img { width: 250px; }
 
+  .hero-crisis > .container { top: 24px; }
+
   .section { padding: 4rem 0; }
 
   .split,
