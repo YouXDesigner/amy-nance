@@ -117,7 +117,9 @@ a { color: var(--color-accent); }
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  width: auto;
   height: var(--header-height);
+  padding-inline: max(1.5rem, 4vw);
 }
 
 .logo { flex-shrink: 0; }
@@ -226,6 +228,12 @@ a { color: var(--color-accent); }
   padding-top: calc(var(--header-height) + 2rem);
   color: var(--color-text);
   text-align: left;
+}
+
+.hero-home .container {
+  width: auto;
+  margin-inline: 0;
+  padding-inline: max(1.5rem, 4vw);
 }
 
 .hero-home h1 { margin-bottom: 0; }
