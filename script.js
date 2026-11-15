@@ -131,3 +131,55 @@ document.getElementById('year').textContent = new Date().getFullYear();
     node.nodeValue = node.nodeValue.replace(shortBeforeSpace, '$1\u00A0');
   }
 })();
+
+(function keepTwoWordsOnLastLine() {
+  function glueLastTwoWords(el) {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.nodeValue) nodes.push(walker.currentNode);
+    }
+    if (!nodes.length) return;
+
+    let full = '';
+    const ranges = [];
+    for (const node of nodes) {
+      ranges.push({ node, start: full.length, end: full.length + node.nodeValue.length });
+      full += node.nodeValue;
+    }
+
+    const match = full.match(/(\S+)(\s+)(\S+)\s*$/);
+    if (!match) return;
+
+    const spaceStart = match.index + match[1].length;
+    const spaceEnd = spaceStart + match[2].length;
+
+    for (let i = 0; i < ranges.length; i++) {
+      const { node, start, end } = ranges[i];
+      if (spaceStart < end && spaceStart >= start) {
+        const localStart = spaceStart - start;
+        if (spaceEnd <= end) {
+          node.nodeValue =
+            node.nodeValue.slice(0, localStart) +
+            '\u00A0' +
+            node.nodeValue.slice(spaceEnd - start);
+          return;
+        }
+
+        // Whitespace spans text nodes: keep the words joined with one nbsp.
+        node.nodeValue = node.nodeValue.slice(0, localStart) + '\u00A0';
+        let remaining = spaceEnd - end;
+        for (let j = i + 1; j < ranges.length && remaining > 0; j++) {
+          const next = ranges[j].node;
+          const leading = next.nodeValue.match(/^\s*/)[0].length;
+          const drop = Math.min(leading, remaining);
+          next.nodeValue = next.nodeValue.slice(drop);
+          remaining -= drop;
+        }
+        return;
+      }
+    }
+  }
+
+  document.querySelectorAll('p').forEach(glueLastTwoWords);
+})();

@@ -52,7 +52,10 @@ h2 { font-size: clamp(1.6rem, 3vw, 1.94rem); }
 h3 { font-size: clamp(1.4rem, 2.5vw, 1.94rem); }
 h4 { font-size: 1.31rem; line-height: 1.38; }
 
-p { margin: 0 0 1.1em; }
+p {
+  margin: 0 0 1.1em;
+  text-wrap: pretty;
+}
 
 a { color: var(--color-accent); }
 
