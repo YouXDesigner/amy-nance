@@ -349,10 +349,23 @@ a { color: var(--color-accent); }
   text-align: center;
 }
 
+.fees-card h2 {
+  margin-bottom: 0;
+}
+
+.fees-card > p {
+  margin: 0;
+  padding: 1.15rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.fees-card > p:last-child {
+  padding-bottom: 0;
+}
+
 .fee-amount {
   font-family: var(--font-heading);
   font-size: 1rem;
-  margin-bottom: 0.4em;
 }
 
 /* FAQ */
