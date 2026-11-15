@@ -469,7 +469,8 @@ a { color: var(--color-accent); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  /* Focal point: Space Needle (~12–18% from left in source) */
+  object-position: 16% center;
 }
 
 .contact-panel {
