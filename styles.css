@@ -47,6 +47,7 @@ h4 {
 
 h1 { font-size: clamp(2.25rem, 5.25vw, 3.43rem); line-height: 1.23; }
 h2 { font-size: clamp(1.6rem, 3vw, 1.94rem); }
+.narrow > h1.center { font-size: clamp(1.6rem, 3vw, 1.94rem); }
 h3 { font-size: clamp(1.4rem, 2.5vw, 1.94rem); }
 h4 { font-size: 1.31rem; line-height: 1.38; }
 
