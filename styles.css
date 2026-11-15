@@ -259,7 +259,7 @@ a { color: var(--color-accent); }
 }
 
 .section-tight > .inset > * {
-  max-width: 860px;
+  max-width: 1080px;
   margin-inline: auto;
 }
 .section-panel { background: var(--color-panel); }
