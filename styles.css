@@ -127,11 +127,14 @@ a { color: var(--color-accent); }
 }
 
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.4rem 3.25rem;
+  /* 3-col grid keeps Home above FAQ left-aligned at every desktop width */
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: start;
+  justify-items: start;
+  align-items: start;
+  column-gap: 3.25rem;
+  row-gap: 0.4rem;
   min-width: 0;
 }
 
@@ -140,7 +143,16 @@ a { color: var(--color-accent); }
 .site-nav a {
   color: var(--color-text);
   font-size: 1.25rem;
+  line-height: 1.1;
   text-decoration: none;
+}
+
+.site-nav .nav-services {
+  line-height: 1;
+}
+
+.site-nav .nav-services-rest::before {
+  content: " ";
 }
 
 .site-nav a:hover,
@@ -223,7 +235,7 @@ a { color: var(--color-accent); }
 
 .hero-home {
   place-items: start stretch;
-  padding-top: calc(var(--header-height) + 2rem);
+  padding-top: calc(var(--header-height) + 2rem + 30px);
   color: var(--color-text);
   text-align: left;
 }
@@ -249,7 +261,16 @@ a { color: var(--color-accent); }
 }
 
 .hero-home::before { display: none; }
-.hero-crisis { background-image: url("assets/crisis-hero.jpg?v=2"); }
+.hero-crisis {
+  background-image: url("assets/crisis-hero.jpg?v=2");
+  background-position: center 70%;
+}
+.hero-crisis::before { display: none; }
+.hero-crisis > .container { top: 170px; }
+.hero-crisis h1 {
+  font-weight: 200;
+  font-family: "Inter", var(--font-heading);
+}
 
 /* Sections */
 .section { padding: 6rem 0; }
@@ -297,6 +318,7 @@ a { color: var(--color-accent); }
   height: 100%;
   max-height: 620px;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .split-reverse > :first-child { order: 2; }
@@ -374,13 +396,23 @@ a { color: var(--color-accent); }
 }
 
 /* FAQ */
-.faq-list {
-  margin-top: 3rem;
-  border-top: 1px solid #ccc;
+.faq-title {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.25rem, 3vw, 2.4rem);
+  line-height: 1.3;
+}
+
+.section-tight > .inset > .faq-list {
+  max-width: none;
+  margin: 0;
 }
 
 .faq-list details {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.faq-list details:last-child {
+  border-bottom: 0;
 }
 
 .faq-list summary {
@@ -418,30 +450,71 @@ a { color: var(--color-accent); }
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 3rem;
+  gap: clamp(2.5rem, 4vw, 4rem);
 }
 
-.resource-card {
-  padding: 2rem;
-  background: var(--color-panel);
+.resource-col h3 {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-muted);
+  margin: 0 0 0.35rem;
+  padding-bottom: 1rem;
 }
 
-.resource-card h3 {
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  text-align: center;
+.resource-col h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 30px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
 }
 
-.resource-card ul {
+.resource-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  gap: 1.1rem;
 }
 
-.resource-card strong { display: block; }
+.resource-col li {
+  position: relative;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.15rem 0;
+}
+
+.resource-col li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 30px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.resource-name {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.resource-action {
+  color: var(--color-muted);
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.resource-action a {
+  text-decoration: none;
+}
+
+.resource-action a:hover {
+  text-decoration: underline;
+}
 
 /* Contact */
 .contact-section {
@@ -450,7 +523,10 @@ a { color: var(--color-accent); }
 
 .contact-stage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Cap photo column so Needle always covers width; form grows on wide screens */
+  grid-template-columns:
+    minmax(0, min(50%, calc((100vh - var(--header-height) - 40px) * 2000 / 1162 * 0.46)))
+    minmax(0, 1fr);
   align-items: stretch;
   min-height: calc(100vh - var(--header-height));
 }
@@ -465,14 +541,13 @@ a { color: var(--color-accent); }
 
 .contact-visual img {
   position: absolute;
-  top: 50%;
+  /* Tip at source y=111 → 40px from frame top; scale covers full height */
+  top: 40px;
   left: 50%;
-  /* Needle ~400px wide in source; 30px clearance each side */
-  width: calc((100% - 60px) * 2000 / 400);
-  height: auto;
+  height: calc((100% - 40px) * 1273 / 1162);
+  width: auto;
   max-width: none;
-  /* Needle center ~22% across source → frame center */
-  transform: translate(-22%, -50%);
+  transform: translate(-23.4%, calc(-111 / 1273 * 100%));
 }
 
 .contact-panel {
@@ -507,6 +582,11 @@ a { color: var(--color-accent); }
   gap: 0.15rem;
   padding-top: 0.85rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-details li:last-child {
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .contact-label {
@@ -616,6 +696,30 @@ a { color: var(--color-accent); }
   .site-nav { column-gap: 1.6rem; }
 }
 
+/* Stack Services & Fees; keep first line on nav baseline */
+@media (max-width: 1499px) {
+  .site-nav .nav-services {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .site-nav .nav-services-rest::before {
+    content: none;
+  }
+}
+
+@media (min-width: 1500px) {
+  .site-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 0.4rem 3.25rem;
+  }
+}
+
 @media (max-width: 767px) {
   .nav-toggle { display: flex; }
   .btn-header { display: none; }
@@ -636,6 +740,14 @@ a { color: var(--color-accent); }
 
   .site-nav.open { display: flex; }
   .site-nav .nav-cta-mobile { display: inline-block; color: #fff; }
+
+  .site-nav .nav-services {
+    display: inline;
+  }
+
+  .site-nav .nav-services-rest::before {
+    content: " ";
+  }
 }
 
 @media (max-width: 860px) {
