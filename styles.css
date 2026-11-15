@@ -231,11 +231,14 @@ a { color: var(--color-accent); }
   padding-inline: max(1.5rem, 4vw);
 }
 
-.hero-home h1 { margin-bottom: 0; }
+.hero-home h1 {
+  margin-bottom: 0.1em;
+  font-size: clamp(2.75rem, 4.5vw, 5.43rem);
+}
 
 .hero-home p {
   margin: 0;
-  font-size: clamp(1.4rem, 2.5vw, 1.94rem);
+  font-size: clamp(1.5rem, 2.1vw, 2.5rem);
   font-weight: 300;
   line-height: 1.33;
   letter-spacing: -0.02em;
