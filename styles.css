@@ -324,6 +324,10 @@ a { color: var(--color-accent); }
   border-radius: 12px;
 }
 
+.about-photo {
+  filter: blur(18px);
+}
+
 .split-reverse > :first-child { order: 2; }
 
 .photo-band img {
