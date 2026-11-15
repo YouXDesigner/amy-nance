@@ -216,7 +216,7 @@ a { color: var(--color-accent); }
   min-height: 100vh;
   padding-top: calc(var(--header-height) + 4rem);
   background-image: url("assets/home-hero.jpg?v=2");
-  background-position: center 20%;
+  background-position: center 15%;
 }
 
 .hero-home {
