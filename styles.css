@@ -268,14 +268,17 @@ a { color: var(--color-accent); }
 }
 
 .section-panel > .center > h2 {
-  margin-top: -20px;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 
 @media (max-width: 1199px) {
   .wide-break { display: none; }
 }
-.section-panel { background: var(--color-panel); }
+.section.section-panel {
+  padding-top: 0;
+  background: var(--color-panel);
+}
 
 .inset {
   padding: 4.5rem clamp(1.5rem, 8vw, 8rem);
