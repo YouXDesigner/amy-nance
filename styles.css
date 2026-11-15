@@ -506,7 +506,11 @@ a { color: var(--color-accent); }
   border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.footer-grid h4 { margin-bottom: 0.6em; }
+.footer-grid h4 {
+  margin-bottom: 0.6em;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 
 .footer-grid p { margin: 0; }
 
