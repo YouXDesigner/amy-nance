@@ -263,7 +263,8 @@ a { color: var(--color-accent); }
   margin-inline: auto;
 }
 
-.section-tight > .inset h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.section-tight > .inset h2,
+.section-panel > .center > h2 { font-size: clamp(2.25rem, 3vw, 2.4rem); }
 
 @media (max-width: 1199px) {
   .wide-break { display: none; }
