@@ -470,8 +470,7 @@ a { color: var(--color-accent); }
   height: 100%;
   object-fit: cover;
   object-position: left center;
-  transform: scale(1.28);
-  transform-origin: 14% 42%;
+  transform: translateX(18%);
 }
 
 .contact-panel {
