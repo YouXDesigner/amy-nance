@@ -468,7 +468,7 @@ a { color: var(--color-accent); }
 
 .contact-intro {
   padding: clamp(1.5rem, 3vw, 2.25rem);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
 }
 
@@ -519,7 +519,7 @@ a { color: var(--color-accent); }
   display: grid;
   gap: 1.1rem;
   padding: clamp(1.5rem, 3vw, 2.25rem);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
 }
 
