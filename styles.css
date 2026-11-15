@@ -328,6 +328,11 @@ a { color: var(--color-accent); }
   color: var(--color-muted);
 }
 
+.service p.service-wide {
+  margin-inline: -1.25rem;
+  white-space: nowrap;
+}
+
 /* Fees */
 .fees {
   position: relative;
@@ -530,6 +535,11 @@ a { color: var(--color-accent); }
 
 @media (max-width: 860px) {
   :root { --header-height: 90px; }
+
+  .service p.service-wide {
+    margin-inline: 0;
+    white-space: normal;
+  }
 
   .logo img { width: 250px; }
 
