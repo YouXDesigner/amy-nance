@@ -350,6 +350,7 @@ a { color: var(--color-accent); }
 }
 
 .fees-card h2 {
+  margin-top: -20px;
   margin-bottom: 0;
 }
 
