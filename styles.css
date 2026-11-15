@@ -509,6 +509,7 @@ a { color: var(--color-accent); }
 .footer-grid h4 {
   margin-bottom: 0.6em;
   text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.28);
   text-underline-offset: 0.18em;
 }
 
