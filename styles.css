@@ -720,34 +720,39 @@ a { color: var(--color-accent); }
   }
 }
 
-@media (max-width: 767px) {
-  .nav-toggle { display: flex; }
-  .btn-header { display: none; }
+/* Compact nav: driven by JS when links would overlap the header CTA (and on small screens). */
+html.nav-compact .nav-toggle { display: flex; }
 
-  .site-nav {
-    display: none;
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.75rem 1.5rem 2rem;
-    background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  }
+html.nav-compact .site-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem max(1.5rem, 4vw) 2rem;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  grid-template-columns: none;
+}
 
-  .site-nav.open { display: flex; }
-  .site-nav .nav-cta-mobile { display: inline-block; color: #fff; }
+html.nav-compact .site-nav.open { display: flex; }
 
-  .site-nav .nav-services {
-    display: inline;
-  }
+html.nav-compact .site-nav .nav-services {
+  display: inline;
+}
 
-  .site-nav .nav-services-rest::before {
-    content: " ";
-  }
+html.nav-compact .site-nav .nav-services-rest::before {
+  content: " ";
+}
+
+html.nav-compact.nav-compact-mobile .btn-header { display: none; }
+
+html.nav-compact.nav-compact-mobile .site-nav .nav-cta-mobile {
+  display: inline-block;
+  color: #fff;
 }
 
 @media (max-width: 860px) {
