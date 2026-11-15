@@ -293,7 +293,12 @@ a { color: var(--color-accent); }
 }
 
 .split:has(.contact-form) {
-  align-items: center;
+  align-items: start;
+}
+
+.split:has(.contact-form) > div:first-child {
+  /* Align Contact Me with Email input (below First name row + gap + Email label) */
+  margin-top: 8.0625rem;
 }
 
 .split img {
