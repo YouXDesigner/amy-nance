@@ -351,7 +351,7 @@ a { color: var(--color-accent); }
 
 .fees-card h2 {
   margin-top: -20px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .fees-card > p {
