@@ -292,6 +292,15 @@ a { color: var(--color-accent); }
   align-items: center;
 }
 
+.split:has(.contact-form) {
+  align-items: start;
+}
+
+.split:has(.contact-form) > div:first-child {
+  /* Match top of first gray inputs (below First name / Last name labels) */
+  margin-top: calc(0.95rem * 1.5 + 0.35rem);
+}
+
 .split img {
   width: 100%;
   height: 100%;
