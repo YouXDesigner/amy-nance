@@ -450,7 +450,7 @@ a { color: var(--color-accent); }
 
 .contact-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(20rem, 30rem);
+  grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 26rem);
   align-items: stretch;
 }
 
