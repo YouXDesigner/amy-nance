@@ -470,8 +470,8 @@ a { color: var(--color-accent); }
   height: 125%;
   width: auto;
   max-width: none;
-  /* Anchor on Needle center at frame center */
-  transform: translate(-18%, -50%);
+  /* Shift left so full Needle sits centered with even side space */
+  transform: translate(-32%, -50%);
 }
 
 .contact-panel {
