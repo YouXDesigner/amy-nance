@@ -324,10 +324,12 @@ a { color: var(--color-accent); }
   border-radius: 12px;
 }
 
-/* Same cover framing as Amy; source is padded so ears/paws stay in view */
-.split img.about-rocket {
-  object-fit: cover;
-  object-position: center center;
+/* Keep full portrait height — don’t crop shorter than the source */
+.split img.about-photo {
+  height: auto;
+  max-height: none;
+  object-fit: initial;
+  aspect-ratio: 752 / 1024;
 }
 
 .split-reverse > :first-child { order: 2; }
@@ -819,6 +821,7 @@ html.nav-compact.nav-compact-mobile .site-nav .nav-cta-mobile {
   .split-reverse > :first-child { order: 0; }
 
   .split img { max-height: 480px; }
+  .split img.about-photo { max-height: none; }
 
   .form-row { grid-template-columns: 1fr; }
 
