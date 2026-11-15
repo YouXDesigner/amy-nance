@@ -7,7 +7,7 @@
   --color-bg: #fff;
   --font-heading: "Libre Baskerville", Georgia, serif;
   --font-body: "Almarai", system-ui, -apple-system, sans-serif;
-  --header-height: 116px;
+  --header-height: 150px;
 }
 
 *,
@@ -131,7 +131,7 @@ a { color: var(--color-accent); }
 .logo { flex-shrink: 0; }
 
 .logo img {
-  width: 340px;
+  width: clamp(300px, 44vw, 460px);
   height: auto;
 }
 
