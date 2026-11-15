@@ -450,7 +450,7 @@ a { color: var(--color-accent); }
 
 .contact-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 34rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 32rem);
   min-height: calc(100vh - var(--header-height));
 }
 
@@ -464,7 +464,8 @@ a { color: var(--color-accent); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  /* Keep Needle fully in frame with a little left breathing room */
+  object-position: 8% center;
 }
 
 .contact-panel {
