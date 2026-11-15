@@ -263,9 +263,11 @@ a { color: var(--color-accent); }
   margin-inline: auto;
 }
 
-.section-tight > .inset h2,
-.section-panel > .center > h2 {
+.section-tight > .inset h2 {
   font-size: clamp(2.25rem, 3vw, 2.4rem);
+}
+
+.section-panel > .center > h2 {
   margin-top: -20px;
   margin-bottom: 40px;
 }
