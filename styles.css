@@ -314,10 +314,10 @@ a { color: var(--color-accent); }
 }
 
 .service img {
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   object-fit: contain;
-  margin: 40px auto -20px;
+  margin: 40px auto -26px;
   mix-blend-mode: multiply;
 }
 
