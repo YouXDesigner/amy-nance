@@ -467,8 +467,8 @@ a { color: var(--color-accent); }
   position: absolute;
   top: 50%;
   left: 50%;
-  /* Scale so Needle (~400px in source) fills (100% - 100px), leaving 50px each side */
-  width: calc((100% - 100px) * 2000 / 400);
+  /* Zoom so full Needle structure has 30px clearance on left and right */
+  width: calc((100% - 60px) * 2000 / 480);
   height: auto;
   max-width: none;
   /* Needle center ~22% across source → frame center */
