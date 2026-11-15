@@ -467,11 +467,11 @@ a { color: var(--color-accent); }
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 120%;
+  height: 125%;
   width: auto;
   max-width: none;
-  /* Anchor on Needle center (~24% across source) at frame center */
-  transform: translate(-24%, -50%);
+  /* Anchor on Needle center at frame center */
+  transform: translate(-18%, -50%);
 }
 
 .contact-panel {
