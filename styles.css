@@ -787,52 +787,9 @@ html.nav-compact.nav-compact-mobile .site-nav .nav-cta-mobile {
   color: #fff;
 }
 
-/* Keep home headline/subhead in the sky on smaller / shorter screens. */
-@media (max-width: 1200px) {
-  .hero-home {
-    padding-top: calc(var(--header-height) + 0.5rem);
-    background-size: auto 155%;
-    background-position: center top;
-  }
-
-  .hero-home h1 {
-    font-size: clamp(2.15rem, 4.2vw, 3.6rem);
-    line-height: 1.12;
-  }
-
-  .hero-home p {
-    font-size: clamp(1.2rem, 2.2vw, 1.9rem);
-    line-height: 1.25;
-  }
-}
-
-@media (min-width: 1201px) and (max-height: 820px) {
-  .hero-home {
-    padding-top: calc(var(--header-height) + 0.5rem);
-    background-size: 145% auto;
-    background-position: center top;
-  }
-}
-
 @media (max-width: 860px) {
   :root { --header-height: 90px; }
   .logo img { width: 250px; }
-
-  .hero-home {
-    padding-top: calc(var(--header-height) + 0.25rem);
-    background-size: auto 165%;
-    background-position: center top;
-  }
-
-  .hero-home h1 {
-    font-size: clamp(2rem, 7vw, 2.45rem);
-    line-height: 1.1;
-  }
-
-  .hero-home p {
-    font-size: clamp(1.1rem, 4vw, 1.35rem);
-    line-height: 1.25;
-  }
 
   .hero-crisis > .container { top: 110px; }
 
